@@ -11,15 +11,9 @@ ENV XDMOD_WEBAPP_PORT=8080
 WORKDIR /
 COPY etc /etc
 
-RUN echo /etc/httpd/conf/httpd.conf >>/etc/deploy-env.conf
+RUN echo /etc/httpd/conf/httpd.conf >>/etc/deploy-env-files.cnf ; \
+    echo /var/log/xdmod >>/etc/deploy-env-dirs.cnf
 
 EXPOSE ${XDMOD_WEBAPP_PORT}
-
-#VOLUME [ \
-#  "${VOL_SECRETS}", \
-#  "${VOL_LOGS}", \
-#  "${VOL_APP_DATA}" \
-#  "${VOL_DB_DATA}" \
-#]
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
