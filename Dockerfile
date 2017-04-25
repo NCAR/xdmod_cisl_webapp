@@ -1,8 +1,7 @@
 FROM cisl-repo/xdmod_cisl_base:1.0
 
 ENV REFRESHED_AT 2017-03-21
-LABEL repo=cisl-repo \
-      name=xdmod_cisl_webapp \
+LABEL name=xdmod_cisl_webapp \
       version=1.0
 
 # These are default values for variables that adjust the deployment environment
