@@ -1,9 +1,9 @@
-FROM cisl-repo/xdmod_cisl_base:1.1
+FROM cisl-repo/xdmod_cisl_base:1.2
 
-ENV REFRESHED_AT 2017-07-12
+ENV REFRESHED_AT 2017-07-20
 LABEL repo=cisl-repo \
       name=xdmod_cisl_webapp \
-      version=1.1
+      version=1.2
 
 # These are default values for variables that adjust the deployment environment
 ENV XDMOD_WEBAPP_PORT=8080
